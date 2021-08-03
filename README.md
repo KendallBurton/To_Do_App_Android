@@ -20,6 +20,8 @@ Here's a walkthrough of implemented user stories:
 
 ![](Todo.gif)
 
+https://imgur.com/a/wAq01Ex
+
 ## Notes
 
 Describe any challenges encountered while building the app.
