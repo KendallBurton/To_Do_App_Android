@@ -18,9 +18,9 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-![](Todo.gif)
+<img src='https://github.com/KendallBurton/Todo/blob/main/todo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
-https://imgur.com/a/wAq01Ex
+
 
 ## Notes
 
