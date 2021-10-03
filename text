@@ -1,1 +1,54 @@
+#include <stdio.h>
+#include <unistd.h>
 
+int main(int argc, char *argv[]) {
+
+char *a = argv[1];
+char *b = argv[2];
+int num = atoi(b);
+
+char *c = argv[3];
+char *d = argv[4];
+int num2= atoi(d);
+
+printf("LED Flash Start\n");
+
+
+
+
+FILE *LEDHandle = NULL;
+const char *LEDBrightness="/sys/class/leds/beaglebone:green:usr0/brightness";
+
+for(int i=0; i<10; i++){
+if((LEDHandle = fopen(LEDBrightness, "r+")) !=NULL) {
+fwrite("1", sizeof(char), 1, LEDHandle);
+fclose(LEDHandle);
+}
+
+if ( argc > 2 ){
+sleep(num);
+}
+else
+sleep(5);
+
+
+if((LEDHandle = fopen(LEDBrightness, "r+")) != NULL){
+fwrite("0", sizeof(char), 1, LEDHandle);
+fclose(LEDHandle);
+}
+
+if ( argc > 2 ){
+sleep(num2);
+}
+else
+sleep(5);
+
+} // end for loop
+
+
+
+
+
+
+printf("LED Flash End");
+}
